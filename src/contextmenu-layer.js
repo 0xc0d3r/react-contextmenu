@@ -93,6 +93,7 @@ export default function(identifier, configure) {
                 let { attributes: {className = "", ...attributes}, renderTag, ...props } = this.props;
 
                 attributes.className = `react-context-menu-wrapper ${className}`;
+                attributes.onClick = this.handleContextClick;
                 attributes.onContextMenu = this.handleContextClick;
                 attributes.onMouseDown = this.handleMouseDown;
                 attributes.onMouseUp = this.handleMouseUp;
